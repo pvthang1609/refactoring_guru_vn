@@ -1,36 +1,62 @@
-## Ám ảnh Kiểu Dữ liệu Nguyên thủy (Primitive Obsession)
+# **Mùi Code: Ám Ảnh Nguyên Thủy (Primitive Obsession)**
 
-**Primitive Obsession** là một loại **Mùi Mã (Code Smell)** thuộc nhóm **Bloaters** (Mã Phình To).
+## **Định Nghĩa**
+Sử dụng quá nhiều kiểu dữ liệu nguyên thủy (int, string, float) thay vì tạo các đối tượng chuyên biệt cho các khái niệm trong domain.
 
-### 1. Dấu hiệu và Triệu chứng
+## **Dấu Hiệu Nhận Biết**
+- Sử dụng string cho số điện thoại, email, địa chỉ
+- Dùng số nguyên cho tiền tệ, tỷ lệ phần trăm
+- Dùng mảng cho các nhóm dữ liệu có cấu trúc
 
-* Sử dụng **kiểu dữ liệu nguyên thủy** (primitives) thay vì các **đối tượng nhỏ** cho các tác vụ đơn giản (ví dụ: tiền tệ, phạm vi giá trị, chuỗi đặc biệt cho số điện thoại, v.v.).
-* Sử dụng **hằng số** để mã hóa thông tin (ví dụ: hằng số `USER_ADMIN_ROLE = 1` để chỉ người dùng có quyền quản trị).
-* Sử dụng **hằng số chuỗi** làm tên trường để sử dụng trong các mảng dữ liệu.
+## **Vấn Đề**
+- Không thể đảm bảo tính hợp lệ của dữ liệu
+- Logic validation bị phân tán khắp nơi
+- Khó biểu đạt ý nghĩa thực sự của dữ liệu
 
-### 2. Nguyên nhân của Vấn đề
+## **Giải Pháp**
+**Thay thế kiểu nguyên thủy bằng đối tượng (Replace Primitive with Object)**
+- Tạo lớp chuyên biệt cho từng khái niệm domain
+- Đóng gói logic validation trong lớp
 
-* Giống như hầu hết các mùi mã khác, ám ảnh kiểu nguyên thủy sinh ra trong những khoảnh khắc "yếu lòng" của lập trình viên. "Chỉ là một trường để lưu trữ dữ liệu thôi!" lập trình viên tự nhủ. Tạo một trường kiểu nguyên thủy dễ dàng hơn nhiều so với việc tạo cả một lớp mới, đúng không?
-* Sau đó, một trường khác được thêm vào theo cùng một cách, và lớp dần trở nên lớn và khó quản lý.
-* Các kiểu nguyên thủy thường được sử dụng để "giả lập" các kiểu dữ liệu. Thay vì một kiểu dữ liệu riêng biệt, bạn có một tập hợp các số hoặc chuỗi tạo thành danh sách các giá trị cho phép cho một thực thể nào đó. Các tên dễ hiểu sau đó được đặt cho các số và chuỗi cụ thể này thông qua các **hằng số**, và chúng được lan truyền rộng rãi.
+## **Ví Dụ**
+```java
+// ❌ Ám ảnh nguyên thủy
+class Customer {
+    private String phoneNumber; // "0123-456-789"
+    private String email;       // "user@example.com"
+    private double balance;     // 1000.0 (tiền tệ nào?)
+}
 
-### 3. Cách Xử lý (Điều trị)
+// ✅ Sử dụng đối tượng chuyên biệt
+class Customer {
+    private PhoneNumber phoneNumber;
+    private Email email;
+    private Money balance;
+}
 
-Tái cấu trúc cốt lõi là **thay thế các kiểu nguyên thủy bằng các lớp đối tượng chuyên biệt** để đóng gói dữ liệu và hành vi liên quan.
+class PhoneNumber {
+    private String value;
+    public PhoneNumber(String value) {
+        if (!isValid(value)) throw new IllegalArgumentException();
+        this.value = value;
+    }
+}
 
-| Kỹ thuật Tái cấu trúc | Khi sử dụng |
-| :--- | :--- |
-| **Replace Data Value with Object** (Thay thế Giá trị Dữ liệu bằng Đối tượng) | Nếu bạn có nhiều trường kiểu nguyên thủy, hãy nhóm một số trường trong số đó một cách logic thành lớp riêng, đồng thời chuyển cả hành vi liên quan đến dữ liệu đó vào lớp mới. |
-| **Introduce Parameter Object** (Giới thiệu Đối tượng Tham số) hoặc **Preserve Whole Object** (Bảo toàn Toàn bộ Đối tượng) | Khi các giá trị của trường kiểu nguyên thủy được sử dụng trong tham số phương thức. |
-| **Replace Type Code with Class** (Thay thế Mã Kiểu bằng Lớp) | Khi dữ liệu phức tạp được mã hóa trong các biến (ví dụ: hằng số để chỉ trạng thái, vai trò, v.v.). |
-| **Replace Type Code with Subclasses** (Thay thế Mã Kiểu bằng Lớp con) hoặc **Replace Type Code with State/Strategy** (Thay thế Mã Kiểu bằng State/Strategy) | Khi cần xử lý mã kiểu dữ liệu phức tạp. |
-| **Replace Array with Object** (Thay thế Mảng bằng Đối tượng) | Nếu có mảng trong số các biến đang mô phỏng một cấu trúc đối tượng (ví dụ: mảng dữ liệu có các chỉ mục là chuỗi hằng số). |
+class Money {
+    private double amount;
+    private Currency currency;
+    
+    public Money(double amount, Currency currency) {
+        this.amount = amount;
+        this.currency = currency;
+    }
+}
+```
 
-### 4. Lợi ích (Payoff)
+## **Kỹ Thuật Tái Cấu Trúc**
+- 🔧 Thay thế kiểu nguyên thủy bằng đối tượng
+- 🔧 Thay thế mã kiểu bằng lớp con
+- 🔧 Giới thiệu tham số đối tượng
 
-* Mã trở nên **linh hoạt** hơn nhờ sử dụng đối tượng thay vì kiểu nguyên thủy.
-* **Tăng khả năng hiểu** và tổ chức mã tốt hơn. Các thao tác trên dữ liệu cụ thể nằm ở cùng một nơi, thay vì bị phân tán. Không còn phải đoán về lý do cho tất cả các hằng số lạ lùng và tại sao chúng lại ở trong một mảng nữa.
-* **Dễ dàng tìm thấy mã trùng lặp** hơn.
-
----
-*Nguồn: Refactoring.Guru*
+## **Kết Luận**
+Ám ảnh nguyên thủy làm giảm khả năng biểu đạt của code. Sử dụng đối tượng chuyên biệt giúp code rõ ràng hơn và đảm bảo tính toàn vẹn dữ liệu.

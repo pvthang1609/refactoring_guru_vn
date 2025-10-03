@@ -1,33 +1,68 @@
-## Lớp Lớn (Large Class)
+# **Mùi Code: Lớp Quá Lớn (Large Class)**
 
-**Large Class** là một loại **Mùi Mã (Code Smell)** thuộc nhóm **Bloaters** (Mã Phình To).
+## **Định Nghĩa**
+Một lớp có quá nhiều trường, phương thức và dòng code, đảm nhận quá nhiều trách nhiệm.
 
-### 1. Dấu hiệu và Triệu chứng
+## **Dấu Hiệu Nhận Biết**
+- Lớp có hàng trăm dòng code
+- Chứa quá nhiều trường và phương thức
+- Khó đặt tên mô tả chính xác cho lớp
+- Có nhóm trường/phương thức không liên quan đến nhau
 
-* Một lớp chứa **quá nhiều trường (fields) / phương thức (methods) / dòng mã**.
+## **Nguyên Nhân**
+- Thêm tính năng mới vào lớp hiện có mà không tái cấu trúc
+- Lớp cố gắng xử lý quá nhiều nhiệm vụ khác nhau
+- Thiếu phân tách trách nhiệm rõ ràng
 
-### 2. Nguyên nhân của Vấn đề
+## **Giải Pháp**
+**Trích xuất lớp (Extract Class)**
+- Tách nhóm trường và phương thức liên quan thành lớp mới
+- Tạo lớp con cho các nhiệm vụ chuyên biệt
 
-* Các lớp thường bắt đầu nhỏ. Nhưng theo thời gian, chúng bị phình to ra khi chương trình phát triển.
-* Tương tự như với Phương thức Dài, các lập trình viên thường cảm thấy **ít tốn công sức tinh thần** hơn khi đặt một tính năng mới vào một lớp đã tồn tại thay vì tạo một lớp mới cho tính năng đó.
-* Vấn đề cốt lõi là lớp đó đang gánh vác **quá nhiều trách nhiệm** (vi phạm Nguyên tắc Trách nhiệm Đơn nhất - Single Responsibility Principle).
+**Trích xuất lớp con (Extract Subclass)**
+**Trích xuất interface (Extract Interface)**
 
-### 3. Cách Xử lý (Điều trị)
+## **Ví Dụ**
+```java
+// ❌ Lớp quá lớn
+class Report {
+    private String title;
+    private String content;
+    private String author;
+    private Date createdDate;
+    // ... nhiều trường khác
+    
+    public void generatePDF() { ... }
+    public void generateHTML() { ... }
+    public void generateExcel() { ... }
+    public void print() { ... }
+    public void saveToDatabase() { ... }
+    public void sendEmail() { ... }
+    // ... nhiều phương thức khác
+}
 
-Khi một lớp đang đảm nhiệm quá nhiều vai trò (chức năng), hãy nghĩ đến việc **tách nó ra**:
+// ✅ Tách thành các lớp nhỏ
+class Report {
+    private String title;
+    private String content;
+    private ReportGenerator generator;
+    private ReportExporter exporter;
+}
 
-| Kỹ thuật Tái cấu trúc | Mục đích |
-| :--- | :--- |
-| **Extract Class** (Trích xuất Lớp) | Giúp tách một phần hành vi của lớp lớn thành một thành phần riêng biệt. |
-| **Extract Subclass** (Trích xuất Lớp con) | Giúp nếu một phần hành vi của lớp lớn có thể được triển khai theo nhiều cách khác nhau hoặc chỉ được sử dụng trong các trường hợp hiếm. |
-| **Extract Interface** (Trích xuất Giao diện) | Giúp nếu cần có một danh sách các hoạt động và hành vi mà client có thể sử dụng. |
-| **Duplicate Observed Data** (Nhân đôi Dữ liệu Được Quan sát) | Nếu lớp lớn chịu trách nhiệm về giao diện đồ họa, bạn có thể cố gắng di chuyển một số dữ liệu và hành vi của nó sang một đối tượng miền (domain object) riêng biệt. Kỹ thuật này giúp giữ cho dữ liệu nhất quán giữa hai nơi. |
+class ReportGenerator { ... }
+class ReportExporter { ... }
+```
 
-### 4. Lợi ích (Payoff)
+## **Kỹ Thuật Tái Cấu Trúc**
+- 🔧 Trích xuất lớp (Extract Class)
+- 🔧 Trích xuất lớp con (Extract Subclass)
+- 🔧 Trích xuất interface (Extract Interface)
 
-* Tái cấu trúc các lớp lớn giúp các nhà phát triển không cần phải nhớ một số lượng lớn thuộc tính cho một lớp duy nhất.
-* Trong nhiều trường hợp, việc chia lớp lớn thành các phần nhỏ giúp **tránh trùng lặp mã** và chức năng.
-* Mã được chia thành các lớp nhỏ hơn sẽ dễ hiểu, dễ kiểm thử (test) và dễ bảo trì hơn nhiều.
+## **Lợi Ích**
+- ✅ Dễ bảo trì và mở rộng
+- ✅ Tái sử dụng code tốt hơn
+- ✅ Giảm sự phụ thuộc giữa các thành phần
+- ✅ Dễ kiểm thử hơn
 
----
-*Nguồn: Refactoring.Guru*
+## **Kết Luận**
+Lớp quá lớn vi phạm nguyên tắc Single Responsibility. Tách lớp lớn thành các lớp nhỏ, chuyên biệt giúp hệ thống linh hoạt và dễ quản lý hơn.

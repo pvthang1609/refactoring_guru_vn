@@ -1,44 +1,75 @@
-## Phương thức Dài (Long Method)
+# **Mùi Code: Phương Thức Quá Dài (Long Method)**
 
-**Long Method** là một loại **Mùi Mã (Code Smell)** thuộc nhóm **Bloaters** (Mã Phình To).
+## **Định Nghĩa**
+Một phương thức chứa quá nhiều dòng code, làm giảm khả năng đọc hiểu và bảo trì.
 
-### 1. Dấu hiệu và Triệu chứng
+## **Dấu Hiệu Nhận Biết**
+- Phương thức dài hàng chục hoặc hàng trăm dòng
+- Có nhiều cấp độ thụt lề (nested logic)
+- Khó đặt tên mô tả chính xác cho phương thức
+- Cần comment để giải thích các phần trong phương thức
 
-* Một phương thức chứa **quá nhiều dòng mã**.
-* Quy tắc chung là bất kỳ phương thức nào **dài hơn mười dòng** đều nên khiến bạn bắt đầu đặt câu hỏi.
+## **Nguyên Nhân**
+- Thêm tính năng mới vào phương thức hiện có mà không tái cấu trúc
+- Ngại tách phương thức nhỏ hơn
+- Thiếu kỷ luật trong việc giữ phương thức ngắn gọn
 
-### 2. Nguyên nhân của Vấn đề
+## **Giải Pháp**
+**Trích xuất phương thức (Extract Method)**
+- Tách các đoạn code thành phương thức riêng với tên mô tả rõ ràng
+- Mỗi phương thức chỉ thực hiện một nhiệm vụ duy nhất
 
-* Giống như Khách sạn California, có điều gì đó luôn được thêm vào một phương thức nhưng không có gì được loại bỏ.
-* Vì việc viết mã dễ hơn việc đọc mã, nên "mùi" này thường không bị chú ý cho đến khi phương thức đó biến thành một con quái vật quá khổ và khó coi.
-* Về mặt tâm lý, thường khó tạo một phương thức mới hơn là thêm vào một phương thức hiện có: "Chỉ có hai dòng thôi, đâu cần thiết phải tạo cả một phương thức riêng cho nó..." Điều này có nghĩa là thêm một dòng, rồi thêm một dòng nữa, sinh ra một mớ mã **"spaghetti code"** (mã rối rắm).
+**Thay thế biến tạm bằng truy vấn (Replace Temp with Query)**
+**Giới thiệu đối tượng tham số (Introduce Parameter Object)**
 
-### 3. Cách Xử lý (Điều trị)
+## **Ví Dụ**
+```java
+// ❌ Phương thức quá dài
+public void printOwing() {
+    printBanner();
+    
+    // Tính toán số tiền nợ
+    double outstanding = 0.0;
+    for (Order order : orders) {
+        outstanding += order.getAmount();
+    }
+    
+    // In chi tiết
+    System.out.println("Tên: " + name);
+    System.out.println("Số tiền: " + outstanding);
+}
 
-Nguyên tắc chung là: **Nếu bạn cảm thấy cần phải chú thích (comment) về điều gì đó bên trong một phương thức, bạn nên lấy đoạn mã đó và đặt nó vào một phương thức mới.**
+// ✅ Tách thành phương thức nhỏ
+public void printOwing() {
+    printBanner();
+    double outstanding = calculateOutstanding();
+    printDetails(outstanding);
+}
 
-* Ngay cả một dòng duy nhất cũng **có thể và nên** được tách ra thành một phương thức riêng nếu nó cần giải thích. Nếu phương thức mới có một cái tên mô tả rõ ràng, sẽ không ai cần phải xem mã để biết nó làm gì.
+private double calculateOutstanding() {
+    double outstanding = 0.0;
+    for (Order order : orders) {
+        outstanding += order.getAmount();
+    }
+    return outstanding;
+}
 
-Các kỹ thuật tái cấu trúc cụ thể:
+private void printDetails(double outstanding) {
+    System.out.println("Tên: " + name);
+    System.out.println("Số tiền: " + outstanding);
+}
+```
 
-| Kỹ thuật Tái cấu trúc | Khi sử dụng |
-| :--- | :--- |
-| **Extract Method** (Trích xuất Phương thức) | Để giảm độ dài của thân phương thức. |
-| **Replace Temp with Query** (Thay thế Biến Tạm bằng Truy vấn) | Nếu các biến cục bộ và tham số cản trở việc trích xuất phương thức. |
-| **Introduce Parameter Object** (Giới thiệu Đối tượng Tham số) hoặc **Preserve Whole Object** (Bảo toàn Toàn bộ Đối tượng) | Nếu các biến cục bộ và tham số cản trở việc trích xuất phương thức. |
-| **Replace Method with Method Object** (Thay thế Phương thức bằng Đối tượng Phương thức) | Nếu không có công thức nào ở trên giúp ích, hãy thử di chuyển toàn bộ phương thức sang một đối tượng riêng biệt. |
-| **Decompose Conditional** (Phân tách Điều kiện) | Các toán tử điều kiện (`if/else`) là dấu hiệu tốt cho thấy mã có thể được chuyển sang một phương thức riêng. |
-| **Extract Method** (Trích xuất Phương thức) | Nếu các vòng lặp (loops) cản trở. |
+## **Khi Nào Có Thể Chấp Nhận?**
+- Phương thức chỉ chứa một cấu trúc điều khiển đơn giản
+- Code đã đủ rõ ràng và dễ hiểu
+- Không có logic phức tạp cần tách riêng
 
-### 4. Lợi ích (Payoff)
+## **Lợi Ích**
+- ✅ Dễ đọc và hiểu code hơn
+- ✅ Tái sử dụng code tốt hơn
+- ✅ Dễ dàng kiểm thử từng phần nhỏ
+- ✅ Giảm khả năng xuất hiện lỗi
 
-* Trong số tất cả các loại mã hướng đối tượng, các lớp có **phương thức ngắn** có tuổi thọ dài nhất. Phương thức hoặc hàm càng dài, càng khó hiểu và khó bảo trì.
-* Ngoài ra, các phương thức dài là nơi ẩn náu hoàn hảo cho **mã trùng lặp** không mong muốn.
-
-### 5. Hiệu suất (Performance)
-
-* Liệu việc tăng số lượng phương thức có làm giảm hiệu suất, như nhiều người tuyên bố không? Trong hầu hết các trường hợp, tác động **rất không đáng kể** đến mức không cần phải lo lắng.
-* Hơn nữa, với mã rõ ràng và dễ hiểu, bạn có nhiều khả năng tìm ra các phương pháp thực sự hiệu quả để cấu trúc lại mã và đạt được hiệu suất thực sự nếu cần.
-
----
-*Nguồn: Refactoring.Guru*
+## **Kết Luận**
+Phương thức dài là một trong những mùi code phổ biến nhất. Giữ phương thức ngắn gọn (thường dưới 10-15 dòng) giúp code dễ bảo trì và mở rộng hơn.
