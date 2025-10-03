@@ -7,3 +7,5 @@ Nói một cách đơn giản, khi bạn tái cấu trúc, bạn đang **dọn d
 ### Mục tiêu của Tái cấu trúc
 
 Mục đích chính của việc tái cấu trúc là để chống lại **nợ kỹ thuật (technical debt)**. Nó biến một mớ hỗn độn thành mã sạch và thiết kế đơn giản.
+
+**Nguồn:** [refactoring.guru/smells/long-method](https://refactoring.guru/smells/long-method)
