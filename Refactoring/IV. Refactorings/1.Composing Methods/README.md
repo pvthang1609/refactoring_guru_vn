@@ -61,4 +61,4 @@ void printDetails(double outstanding) {
 ## **Kết Luận**
 Các kỹ thuật tổ chức phương thức giúp code trở nên rõ ràng, dễ bảo trì và linh hoạt hơn thông qua việc phân tách và tối ưu hóa các phương thức.
 
-**Nguồn:** [refactoring.guru/smells/long-method](https://refactoring.guru/smells/long-method)
+**Nguồn:** [refactoring.guru/refactoring/techniques/composing-methods](https://refactoring.guru/refactoring/techniques/composing-methods)
