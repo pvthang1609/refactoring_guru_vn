@@ -115,3 +115,5 @@ person.setAge(30);           // Validation sẽ chặn giá trị không hợp l
 ## **Kết Luận**
 
 Đóng gói trường là kỹ thuật cơ bản nhưng quan trọng trong lập trình hướng đối tượng. Bằng cách chuyển các trường public thành private và cung cấp methods truy cập, bạn bảo vệ được tính toàn vẹn dữ liệu và tạo ra code linh hoạt, dễ bảo trì hơn.
+
+**Nguồn:** [refactoring.guru/encapsulate-field](https://refactoring.guru/encapsulate-field)

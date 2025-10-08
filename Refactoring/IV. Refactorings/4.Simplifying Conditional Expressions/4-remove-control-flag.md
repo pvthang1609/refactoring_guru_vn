@@ -181,3 +181,5 @@ class AccountValidator {
 ## **Kết Luận**
 
 Loại bỏ cờ điều khiển là kỹ thuật hiệu quả để đơn giản hóa code và làm cho luồng thực thi trở nên rõ ràng hơn. Bằng cách thay thế các biến flag bằng các câu lệnh điều khiển trực tiếp như break, continue và return, bạn tạo ra code dễ đọc, dễ bảo trì và ít lỗi hơn. Tuy nhiên, cần cân nhắc kỹ để đảm bảo không làm mất đi tính rõ ràng trong các tình huống phức tạp.
+
+**Nguồn:** [refactoring.guru/remove-control-flag](https://refactoring.guru/remove-control-flag)

@@ -237,3 +237,5 @@ Order order = new Order("O001", customer);
 ## **Kết Luận**
 
 Thay đổi giá trị thành tham chiếu là kỹ thuật mạnh mẽ để quản lý các đối tượng có tính duy nhất trong hệ thống. Bằng cách đảm bảo mọi nơi sử dụng cùng một instance, bạn có thể duy trì tính nhất quán của dữ liệu và tối ưu hiệu năng. Tuy nhiên, cần cân nhắc kỹ giữa lợi ích và độ phức tạp khi áp dụng kỹ thuật này.
+
+**Nguồn:** [refactoring.guru/change-value-to-reference](https://refactoring.guru/change-value-to-reference)

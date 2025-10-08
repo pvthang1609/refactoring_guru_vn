@@ -129,3 +129,5 @@ class Person {
 ## **Kết Luận**
 
 Hợp nhất lớp là kỹ thuật quan trọng để đơn giản hóa hệ thống khi có quá nhiều lớp nhỏ không cần thiết. Tuy nhiên, cần cân nhắc kỹ lưỡng để tránh việc tạo ra các lớp quá lớn và vi phạm nguyên tắc Single Responsibility.
+
+**Nguồn:** [refactoring.guru/inline-class](https://refactoring.guru/inline-class)

@@ -256,3 +256,5 @@ class User {
 ## **Kết Luận**
 
 Thay thế mã kiểu bằng lớp là kỹ thuật quan trọng để cải thiện tính an toàn và khả năng bảo trì của code. Bằng cách chuyển đổi các số và chuỗi "ma thuật" thành các lớp có tên ý nghĩa, bạn tạo ra code dễ đọc hơn, ít lỗi hơn và dễ dàng mở rộng khi yêu cầu thay đổi.
+
+**Nguồn:** [refactoring.guru/replace-type-code-with-class](https://refactoring.guru/replace-type-code-with-class)

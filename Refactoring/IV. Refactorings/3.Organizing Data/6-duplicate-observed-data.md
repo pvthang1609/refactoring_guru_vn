@@ -331,3 +331,5 @@ class OrderWindow extends JFrame implements OrderListener {
 ## **Kết Luận**
 
 Nhân bản dữ liệu quan sát là kỹ thuật quan trọng để tách biệt logic nghiệp vụ khỏi giao diện người dùng. Bằng cách di chuyển dữ liệu và logic sang lớp domain và sử dụng Observer pattern để đồng bộ hóa, bạn tạo ra ứng dụng linh hoạt, dễ bảo trì và dễ test hơn.
+
+**Nguồn:** [refactoring.guru/duplicate-observed-data](https://refactoring.guru/duplicate-observed-data)

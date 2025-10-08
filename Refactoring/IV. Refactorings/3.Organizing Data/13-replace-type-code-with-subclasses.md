@@ -158,3 +158,5 @@ class EmployeeFactory {
 ```
 
 Việc tái cấu trúc này cho phép chúng ta loại bỏ các điều kiện và sử dụng đa hình để xử lý các hành vi khác nhau cho từng loại nhân viên.
+
+**Nguồn:** [refactoring.guru/replace-type-code-with-subclasses](https://refactoring.guru/replace-type-code-with-subclasses)

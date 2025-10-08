@@ -84,3 +84,5 @@ class Employee {
 ## **Kết Luận**
 
 Giới thiệu khẳng định là kỹ thuật hiệu quả để làm rõ và kiểm tra các giả định trong code. Nó giúp code trở nên rõ ràng hơn, phát hiện lỗi sớm và dễ bảo trì. Tuy nhiên, cần phân biệt rõ giữa assertion (cho điều kiện không bao giờ được vi phạm) và error handling (cho lỗi có thể xảy ra).
+
+**Nguồn:** [refactoring.guru/introduce-assertion](https://refactoring.guru/introduce-assertion)

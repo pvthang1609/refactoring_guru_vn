@@ -178,3 +178,5 @@ class LoanCalculator {
 ## **Kết Luận**
 
 Thay thế số ma thuật bằng hằng số có tên là kỹ thuật đơn giản nhưng hiệu quả để cải thiện khả năng đọc và bảo trì code. Bằng cách đặt tên có ý nghĩa cho các con số, bạn giúp người đọc code hiểu được ý nghĩa thực sự của chúng mà không cần phải đoán hoặc tìm kiếm tài liệu.
+
+**Nguồn:** [refactoring.guru/replace-magic-number-with-symbolic-constant](https://refactoring.guru/replace-magic-number-with-symbolic-constant)

@@ -228,3 +228,5 @@ class OrderRepository {
 ## **Kết Luận**
 
 Thay đổi liên kết hai chiều thành một chiều giúp đơn giản hóa thiết kế khi liên kết ngược không còn cần thiết. Kỹ thuật này giảm độ phức tạp, giảm coupling và làm code dễ bảo trì hơn. Tuy nhiên, cần phân tích kỹ để đảm bảo liên kết ngược thực sự không còn được sử dụng trước khi loại bỏ.
+
+**Nguồn:** [refactoring.guru/change-bidirectional-association-to-unidirectional](https://refactoring.guru/change-bidirectional-association-to-unidirectional)

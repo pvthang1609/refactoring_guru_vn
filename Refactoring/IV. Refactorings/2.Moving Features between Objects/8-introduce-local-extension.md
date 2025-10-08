@@ -284,3 +284,6 @@ String result = extendedNames
 ## **Kết Luận**
 
 Giới thiệu Local Extension là giải pháp mạnh mẽ khi cần mở rộng đáng kể chức năng của lớp third-party. Nó cung cấp cách tiếp cận có cấu trúc để nhóm các chức năng liên quan và tạo ra interface thống nhất, dễ sử dụng cho client code.
+
+
+**Nguồn:** [refactoring.guru/introduce-local-extension](https://refactoring.guru/introduce-local-extension)

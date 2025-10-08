@@ -219,3 +219,5 @@ class AfricanBird implements Flyable {
 ## **Kết Luận**
 
 Thay thế điều kiện bằng đa hình là kỹ thuật mạnh mẽ để xử lý các hành vi khác nhau dựa trên loại đối tượng. Bằng cách chuyển đổi từ các câu lệnh điều kiện cứng nhắc sang hệ thống phân cấp lớp linh hoạt, bạn tạo ra code dễ mở rộng, dễ bảo trì và tuân thủ tốt các nguyên tắc SOLID.
+
+**Nguồn:** [refactoring.guru/replace-conditional-with-polymorphism](https://refactoring.guru/replace-conditional-with-polymorphism)

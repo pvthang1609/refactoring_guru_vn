@@ -199,3 +199,5 @@ class OrderProcessor {
 ## **Kết Luận**
 
 Hợp nhất biểu thức điều kiện là kỹ thuật hiệu quả để đơn giản hóa code khi có nhiều điều kiện dẫn đến cùng một kết quả. Bằng cách kết hợp các điều kiện liên quan và đặt tên có ý nghĩa, bạn tạo ra code dễ đọc, dễ bảo trì và ít lỗi hơn. Tuy nhiên, cần cân nhắc để không hợp nhất các điều kiện không thực sự liên quan với nhau.
+
+**Nguồn:** [refactoring.guru/consolidate-conditional-expression](https://refactoring.guru/consolidate-conditional-expression)

@@ -175,3 +175,5 @@ class OrderValidator {
 ## **Kết Luận**
 
 Thay thế điều kiện lồng nhau bằng mệnh đề bảo vệ là kỹ thuật mạnh mẽ để đơn giản hóa code phức tạp. Bằng cách xử lý các trường hợp đặc biệt sớm và trả về ngay lập tức, bạn tạo ra code dễ đọc, dễ bảo trì và ít lỗi hơn. Kỹ thuật này đặc biệt hữu ích trong các phương thức validation và xử lý nghiệp vụ có nhiều điều kiện tiên quyết.
+
+**Nguồn:** [refactoring.guru/replace-nested-conditional-with-guard-clauses](https://refactoring.guru/replace-nested-conditional-with-guard-clauses)

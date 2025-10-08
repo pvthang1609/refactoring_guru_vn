@@ -192,3 +192,5 @@ int weeksDelinquent = customer.getHistory().getWeeksDelinquentInLastYear();
 ## **Kết Luận**
 
 Giới thiệu đối tượng Null là kỹ thuật hiệu quả để xử lý vấn đề null trong code. Bằng cách cung cấp một đối tượng với hành vi mặc định an toàn, bạn loại bỏ được các kiểm tra null lặp lại và làm cho code trở nên sạch sẽ, an toàn hơn. Tuy nhiên, cần sử dụng một cách thận trọng để không che giấu các lỗi thực sự cần được xử lý.
+
+**Nguồn:** [refactoring.guru/introduce-null-object](https://refactoring.guru/introduce-null-object)

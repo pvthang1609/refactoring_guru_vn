@@ -105,3 +105,5 @@ class AccountType {
 ## **Kết Luận**
 
 Di chuyển phương thức là kỹ thuật cơ bản nhưng mạnh mẽ để cải thiện thiết kế hướng đối tượng. Bằng cách đặt mỗi phương thức vào đúng lớp có trách nhiệm phù hợp, chúng ta tạo ra hệ thống dễ bảo trì, mở rộng và ít lỗi hơn.
+
+**Nguồn:** [refactoring.guru/move-method](https://refactoring.guru/move-method)

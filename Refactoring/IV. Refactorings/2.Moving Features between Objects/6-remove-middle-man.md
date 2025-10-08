@@ -218,3 +218,5 @@ processor.processCompleteOrder(order);
 ## **Kết Luận**
 
 Loại bỏ người trung gian giúp đơn giản hóa hệ thống khi có quá nhiều lớp chỉ thực hiện ủy quyền mà không thêm giá trị. Tuy nhiên, cần cân nhắc kỹ để giữ lại những phương thức ủy quyền thực sự hữu ích và đảm bảo không làm mất đi tính đóng gói cần thiết.
+
+**Nguồn:** [refactoring.guru/remove-middle-man](https://refactoring.guru/remove-middle-man)

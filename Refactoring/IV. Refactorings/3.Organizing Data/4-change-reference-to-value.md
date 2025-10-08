@@ -268,3 +268,5 @@ System.out.println(customer1.getAddress().isDomestic()); // true
 ## **Kết Luận**
 
 Thay đổi tham chiếu thành giá trị là kỹ thuật đơn giản hóa hệ thống khi đối tượng không cần quản lý danh tính phức tạp. Bằng cách chuyển sang value object, bạn tạo ra code dễ hiểu, dễ test và an toàn hơn. Tuy nhiên, kỹ thuật này chỉ phù hợp cho các đối tượng nhỏ, bất biến và không yêu cầu quản lý vòng đời.
+
+**Nguồn:** [refactoring.guru/change-reference-to-value](https://refactoring.guru/change-reference-to-value)

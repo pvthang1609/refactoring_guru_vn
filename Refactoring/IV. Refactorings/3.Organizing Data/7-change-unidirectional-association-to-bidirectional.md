@@ -275,3 +275,5 @@ System.out.println("Marketing employees: " + marketing.getEmployees().size()); /
 ## **Kết Luận**
 
 Thay đổi liên kết một chiều thành hai chiều là kỹ thuật hữu ích khi cần truy cập mối quan hệ theo cả hai hướng. Tuy nhiên, cần cân nhắc kỹ giữa lợi ích và độ phức tạp, đồng thời đảm bảo tính nhất quán được duy trì thông qua các phương thức quản lý quan hệ tập trung.
+
+**Nguồn:** [refactoring.guru/change-unidirectional-association-to-bidirectional](https://refactoring.guru/change-unidirectional-association-to-bidirectional)

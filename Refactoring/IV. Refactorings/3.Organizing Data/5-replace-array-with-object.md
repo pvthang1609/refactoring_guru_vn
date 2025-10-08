@@ -193,3 +193,5 @@ if (order.canBeCancelled()) {
 ## **Kết Luận**
 
 Thay thế mảng bằng đối tượng là kỹ thuật quan trọng để cải thiện khả năng đọc và bảo trì code. Bằng cách chuyển đổi các mảng "đa nghĩa" thành các đối tượng có cấu trúc rõ ràng, bạn tạo ra code dễ hiểu, ít lỗi hơn và dễ dàng mở rộng khi yêu cầu thay đổi.
+
+**Nguồn:** [refactoring.guru/replace-array-with-object](https://refactoring.guru/replace-array-with-object)

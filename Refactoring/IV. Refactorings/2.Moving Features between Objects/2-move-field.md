@@ -120,3 +120,5 @@ class Order {
 ## **Kết Luận**
 
 Di chuyển trường giúp cải thiện thiết kế hướng đối tượng bằng cách đặt dữ liệu vào đúng lớp có trách nhiệm quản lý nó. Kỹ thuật này đặc biệt hữu ích khi phát hiện ra sự phân bố trách nhiệm không hợp lý trong hệ thống hiện tại.
+
+**Nguồn:** [refactoring.guru/move-field](https://refactoring.guru/move-field)

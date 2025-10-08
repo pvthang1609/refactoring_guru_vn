@@ -219,3 +219,5 @@ class Order {
 ## **Kết Luận**
 
 Đóng gói bộ sưu tập là kỹ thuật quan trọng để bảo vệ tính toàn vẹn dữ liệu và đảm bảo tính đóng gói trong các lớp có chứa collection. Bằng cách cung cấp các phương thức được kiểm soát để thao tác với collection, bạn ngăn chặn được các sửa đổi không mong muốn và tạo ra code an toàn, dễ bảo trì hơn.
+
+**Nguồn:** [refactoring.guru/encapsulate-collection](https://refactoring.guru/encapsulate-collection)

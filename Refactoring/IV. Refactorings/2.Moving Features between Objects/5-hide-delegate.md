@@ -174,3 +174,5 @@ List<Person> allEmployees = company.getAllEmployees();
 ## **Kết Luận**
 
 Ẩn đối tượng ủy quyền là kỹ thuật quan trọng để giảm sự phụ thuộc giữa các lớp và cải thiện tính đóng gói. Bằng cách tạo các phương thức ủy quyền, chúng ta che giấu được cấu trúc phức tạp bên trong và cung cấp interface đơn giản, dễ sử dụng cho client.
+
+**Nguồn:** [refactoring.guru/hide-delegate](https://refactoring.guru/hide-delegate)

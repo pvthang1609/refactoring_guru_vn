@@ -179,3 +179,5 @@ private double getExpenseLimit() {
 ## **Kết Luận**
 
 Các kỹ thuật đơn giản hóa biểu thức điều kiện giúp code trở nên rõ ràng, dễ bảo trì và ít lỗi hơn. Bằng cách áp dụng các kỹ thuật này, bạn có thể biến các điều kiện phức tạp thành code tự giải thích, giúp người đọc dễ dàng hiểu được logic mà không cần phải phân tích quá nhiều.
+
+**Nguồn:** [refactoring.guru/refactoring/techniques/simplifying-conditional-expressions](https://refactoring.guru/refactoring/techniques/simplifying-conditional-expressions)

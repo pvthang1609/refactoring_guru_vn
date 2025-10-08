@@ -92,3 +92,6 @@ class CustomerType {
 ## **Kết Luận**
 
 Việc di chuyển tính năng giữa các đối tượng giúp duy trì nguyên tắc Single Responsibility và tạo ra kiến trúc phần mềm linh hoạt, dễ bảo trì. Các kỹ thuật này đặc biệt hữu ích khi hệ thống phát triển và yêu cầu thay đổi theo thời gian.
+
+
+**Nguồn:** [refactoring.guru/refactoring/techniques/moving-features-between-objects](https://refactoring.guru/refactoring/techniques/moving-features-between-objects)

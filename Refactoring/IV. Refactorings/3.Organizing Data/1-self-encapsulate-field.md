@@ -159,3 +159,5 @@ class Account {
 ## **Kết Luận**
 
 Tự đóng gói trường là kỹ thuật quan trọng để chuẩn bị cho những thay đổi trong tương lai và tăng tính linh hoạt của code. Bằng cách luôn sử dụng getter/setter ngay cả trong nội bộ lớp, bạn tạo ra một điểm kiểm soát duy nhất cho việc truy cập dữ liệu, giúp dễ dàng thêm các tính năng như validation, logging, caching, hoặc thay đổi cách lưu trữ dữ liệu mà không ảnh hưởng đến toàn bộ codebase.
+
+**Nguồn:** [refactoring.guru/self-encapsulate-field](https://refactoring.guru/self-encapsulate-field)

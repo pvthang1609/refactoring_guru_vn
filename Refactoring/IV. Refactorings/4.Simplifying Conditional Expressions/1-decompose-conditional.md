@@ -194,3 +194,5 @@ class LoanApplication {
 ## **Kết Luận**
 
 Tách biến điều kiện là kỹ thuật đơn giản nhưng hiệu quả để cải thiện khả năng đọc và bảo trì code. Bằng cách chuyển các điều kiện phức tạp thành các phương thức có tên mô tả rõ ràng, bạn giúp người đọc code hiểu được ý nghĩa của điều kiện mà không cần phải phân tích logic phức tạp.
+
+**Nguồn:** [refactoring.guru/decompose-conditional](https://refactoring.guru/decompose-conditional)

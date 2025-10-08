@@ -137,3 +137,5 @@ class Address {
 ## **Kết Luận**
 
 Trích xuất lớp là kỹ thuật mạnh mẽ để giải quyết vấn đề lớp quá lớn và vi phạm nguyên tắc Single Responsibility. Bằng cách tách các trách nhiệm khác nhau vào các lớp chuyên biệt, chúng ta tạo ra hệ thống linh hoạt, dễ bảo trì và mở rộng hơn.
+
+**Nguồn:** [refactoring.guru/extract-class](https://refactoring.guru/extract-class)

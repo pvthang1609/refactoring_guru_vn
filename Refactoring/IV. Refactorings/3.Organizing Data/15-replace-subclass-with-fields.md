@@ -275,3 +275,5 @@ System.out.println(typeO.canDonateTo(typeA));    // true
 ## **Kết Luận**
 
 Thay thế lớp con bằng trường là kỹ thuật hữu ích để đơn giản hóa hệ thống khi các lớp con chỉ khác biệt về giá trị dữ liệu mà không có hành vi khác biệt. Bằng cách chuyển đổi sang các trường hoặc enum, bạn tạo ra code gọn gàng hơn, dễ bảo trì hơn mà vẫn giữ được tính rõ ràng. Tuy nhiên, cần cân nhắc kỹ để không vô tình loại bỏ tính đa hình thực sự cần thiết.
+
+**Nguồn:** [refactoring.guru/replace-subclass-with-fields](https://refactoring.guru/replace-subclass-with-fields)

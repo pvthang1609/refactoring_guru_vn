@@ -191,3 +191,5 @@ class FileProcessor {
 ## **Kết Luận**
 
 Hợp nhất điều kiện trùng lặp là kỹ thuật đơn giản nhưng hiệu quả để loại bỏ sự trùng lặp trong các câu lệnh điều kiện. Bằng cách di chuyển code chung ra ngoài, bạn không chỉ làm code ngắn gọn hơn mà còn làm nổi bật được sự khác biệt thực sự giữa các nhánh, giúp code dễ đọc và dễ bảo trì hơn.
+
+**Nguồn:** [refactoring.guru/consolidate-duplicate-conditional-fragments](https://refactoring.guru/consolidate-duplicate-conditional-fragments)

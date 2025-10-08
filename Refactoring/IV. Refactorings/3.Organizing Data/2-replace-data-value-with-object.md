@@ -266,3 +266,5 @@ String fullAddress = person.getAddress().getFullAddress();
 ## **Kết Luận**
 
 Thay thế giá trị dữ liệu bằng đối tượng là kỹ thuật mạnh mẽ để chống lại "Primitive Obsession" - việc sử dụng quá nhiều kiểu dữ liệu nguyên thủy. Bằng cách chuyển đổi các giá trị đơn giản thành các đối tượng có ý nghĩa, bạn tạo ra code dễ đọc, dễ bảo trì và linh hoạt hơn trước các thay đổi yêu cầu.
+
+**Nguồn:** [refactoring.guru/replace-data-value-with-object](https://refactoring.guru/replace-data-value-with-object)

@@ -320,3 +320,5 @@ System.out.println("Seasonal price: " + order.calculateTotal());
 ## **Kết Luận**
 
 Thay thế mã kiểu bằng State/Strategy là kỹ thuật mạnh mẽ để xử lý các hành vi thay đổi động. Bằng cách chuyển đổi từ mã kiểu cứng nhắc sang các đối tượng linh hoạt, bạn tạo ra hệ thống dễ mở rộng, dễ bảo trì và tuân thủ tốt các nguyên tắc thiết kế hướng đối tượng.
+
+**Nguồn:** [refactoring.guru/replace-type-code-with-state-strategy](https://refactoring.guru/replace-type-code-with-state-strategy)

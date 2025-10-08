@@ -200,3 +200,5 @@ List<Order> pendingOrders = OrderUtils.getPendingOrders(orders);
 ## **Kết Luận**
 
 Giới thiệu phương thức ngoại lai là giải pháp linh hoạt khi bạn cần thêm chức năng cho lớp không thể sửa đổi. Kỹ thuật này giúp giảm code trùng lặp và cải thiện khả năng bảo trì, nhưng cần sử dụng hợp lý để tránh tạo ra quá nhiều phương thức rời rạc.
+
+**Nguồn:** [refactoring.guru/introduce-foreign-method](https://refactoring.guru/introduce-foreign-method)

@@ -199,3 +199,5 @@ if (status == STATUS_ACTIVE) {
 ## **Kết Luận**
 
 Tổ chức dữ liệu hiệu quả là nền tảng cho thiết kế hướng đối tượng tốt. Bằng cách áp dụng các kỹ thuật này, bạn tạo ra hệ thống dễ hiểu, dễ bảo trì và linh hoạt trước các thay đổi yêu cầu. Hãy bắt đầu với việc nhận diện các "mùi code" liên quan đến dữ liệu và áp dụng kỹ thuật phù hợp để cải thiện.
+
+**Nguồn:** [refactoring.guru/refactoring/techniques/organizing-data](https://refactoring.guru/refactoring/techniques/organizing-data)
